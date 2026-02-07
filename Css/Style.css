@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: Arial;
+  background:#f5f5f5;
+}
+
+/* HEADER */
+.top-header {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  padding:10px;
+  border-bottom:2px solid #ddd;
+}
+
+.logo-left img {
+  max-width:100%;
+  height:70px;
+}
+
+/* MENU */
+.menu {
+  background:#eee;
+  padding:10px;
+  font-size:16px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu span {
+  margin-right:15px;
+  cursor:pointer;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  padding:10px;
+  font-size:14px;
+  color:#2f6fa5;
+}
+
+/* NOTICE */
+.notice {
+  background:#e6e6e6;
+  padding:10px;
+  margin:10px;
+  font-size:16px;
+}
+
+/* FORM */
+.vikas-form {
+  background:#fff;
+  margin:10px;
+  border:1px solid #ddd;
+}
+
+.form-title {
+  background:#d9d9d9;
+  padding:10px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.form-row {
+  display:flex;
+  padding:12px;
+  border-bottom:1px solid #eee;
+  align-items:center;
+}
+
+.label {
+  width:40%;
+  font-size:15px;
+}
+
+.field {
+  width:60%;
+}
+
+.field input,
+.field select {
+  width:90%;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+
+.geo-label {
+  font-weight:bold;
+}
+
+.geo-btn {
+  background:#337ab7;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer {
+  font-size:12px;
+  padding:15px;
+  color:#444;
+}
+
+.page-no {
+  color:#aaa;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+  }
+
+  .logo-left img {
+    height:50px;
+  }
+
+  /* मोबाइल पर मेनू स्टाइल */
+  .menu {
+    position: relative;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    z-index: 100;
+    padding: 10px;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .menu-items span {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label,
+  .field {
+    width:100%;
+  }
+
+  .field input,
+  .field select {
+    width:100%;
+  }
+
+  .geo-btn {
+    width:100%;
+    font-size:16px;
+  }
+
+  .notice {
+    font-size:14px;
+  }
+}
+
+/* डेस्कटॉप पर हंबर्गर छुपाएं */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  
+  .menu-items {
+    display: flex !important;
+  }
+}
